@@ -1,12 +1,10 @@
 <script>
-	let { isOpen } = $props();
+	let { close } = $props();
 </script>
 
-{#if isOpen}
-	<div
-		class="fixed top-0 left-0 h-full w-full bg-black/60"
-		on:click={() => (isOpen = false)}
-	>
-		asd
-	</div>
-{/if}
+<div
+	class="align-center fixed top-0 left-0 mt-7 grid h-full w-full items-center bg-black/70"
+	on:click={close}
+>
+	<div class="w-[90%] h-[87%] bg-black mx-auto" on:click|stopPropagation>asd</div>
+</div>

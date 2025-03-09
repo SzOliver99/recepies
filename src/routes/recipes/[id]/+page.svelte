@@ -61,7 +61,9 @@
 	</div>
 </div>
 
-<ModifyModal isOpen={isModifyOpen} />
+{#if isModifyOpen}
+	<ModifyModal close={() => (isModifyOpen = false)} />
+{/if}
 
 <style>
 	:global(body) {
